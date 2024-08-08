@@ -2,22 +2,21 @@
 #and methods to calculate the area and perimeter.
 
 class Rectangle:
-    """Rectangle area and parameter calculation"""
+    """Get area and perimeter of rectangle"""
     def __init__(self, width, height):
-        self.width = width
-        self.height = height
+        """Core data structure of Rectangle class"""
+        self.width = width      #Width of rectangle
+        self.height = height    #height of rectangle
     
     def area(self):
-        """Rectangle area calculation"""
-        # Your code here
+        """Calculate area of Rectangle"""
         return self.width * self.height
     
     def perimeter(self):
-        """Rectangle parameter calculation"""
-        # Your code here
+        """Calculate perimeter of Rectangle"""
         return (self.width * 2) + (self.height * 2)
 
-if __name__ == '__main__':
+if __name__ = '__main__':
     rect = Rectangle(4, 5)
     print(rect.area())       # Output: 20
     print(rect.perimeter())  # Output: 18

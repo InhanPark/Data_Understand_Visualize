@@ -6,36 +6,38 @@
 #You can move only right or down.
 
 def shortest_path(grid):
-    # Your code here
-    """ㄴShortest Path Finding"""
+    """find shortest path length"""
+    
+    rows = len(grid)    #length of rows
+    cols = len(grid[0]) #length of columns
+    
+    directions = [(0, 1), (1, 0)]   #Directions for moving right and down
+    queue = deque([(0, 0, 0)])      #row, col, distance
+    visited = set((0, 0))           #Set of visited point
 
-    rows = len(grid)
-    cols = len(grid[0])
+    #If these positions are 1, path cannot be found
     if grid[0][0] == 1 or grid[rows - 1][cols - 1] == 1:
         return -1
     
-    directions = [(0, 1), (1, 0)]
-    queue = deque([(0, 0, 0)]) #row, col, distance
-    visited = set((0, 0))
-    
     while queue:
+        #Pop left queue to find a new way from here
         row, col, dist = queue.popleft()
-        
+
+        #If reached the bottom-right corner, return distance
         if row == rows - 1 and col == cols - 1:
             return dist
-        
+
+        #Explore neighbors
         for dr, dc in directions:
             nr = row + dr
             nc = col + dc
             if (0 <= nr and nr < rows) and (0 <= nc and nc < cols) and grid[nr][nc] == 0 and (nr, nc) not in visited:
                 visited.add((nr, nc))
                 queue.append((nr, nc, dist + 1))
-                print(queue)
-    
+    #If queue is exhausted without finding the bottom-right corner
     return -1
 
 if __name__ == '__main__':
-    
     grid = [
         [0, 0, 0],
         [0, 1, 0],
