@@ -1,7 +1,7 @@
 ﻿#Write a function that returns the n-th number in the Fibonacci sequence.
 
 def fibonacci(n):
-    """Get n-th fibonacci number"""
+    """Calculate a Fibonacci Series"""
     #initial variable for current fibonacci number
     #and previous fibonacci number
     result = 0
