@@ -1,0 +1,36 @@
+00. Statistics (통계학) 란?
+Data 로부터 무었인가를 알아내는(learn) tool(도구)과 방법(method)을 포괄적으로 말함. 학문적인 측면의 통계학을 지칭함.
+
+00. Statisticians (통계학자) 란?
+Data 의 특성(property)을 찾아내기 위한 data analysis 방법을 개발하고 적용하는 사람. 
+
+00. Researchers and Workers
+통계적 tool(도구)과 방법(method)을 적용하고 확장하는 사람. Data analysis 에 대한 새로운 아이디어와 방법에 기여함.
+
+00. Statistic (통계량) 이란?
+Data 의 모임의 특성을 숫자나 그림으로 표현한 것
+ - final exam 의 평균성적 (각 성적이 data, 이것들의 특성중 하나인 평균이 통계량)
+ - 한 장소의 최저온도 (그 장소에서 측정된 모든 온도가 data, 이것들의 특성중 하나인 최저온도가 통계량)
+ - 은퇴한 사람의 비율 (전체 인구가 data, 이것들의 특성중 하나인 은퇴자 비율이 통계량)
+
+00. Statistics 는 도전과 기회가 계속 나타나는 분야
+ - 통계적 방법의 특성을 계속 연구중
+ - 새로운 분석 방법의 개발에 따른 새로운 응용 영역의 확대
+ - 새로운 sensor 가 만들어지며, 새로운 type 의 data 가 나타남
+ - Computer 의 발전으로 더많은 복잡한 data 의 처리가 가능해짐 
+
+00. Statistical Science 는 다양한 관점(Perspective)으로 발전하고 있음 (*중요한 내용)
+ 1. art of summarizing data: data 가 크고 많아지면서 이를 줄이고 요약하는 것이 중요해짐
+ 2. science of uncertainty: data 가 잘못된 결론으로 유도할 수 있음. 이것은 피할 수없지만, 얼마나 잘못될 가능성이 있는지를 알아야 함 (확률의 문제)
+ 3. science of decision: data 의 통계적 분석 결과를 가지고 의사 결정을 하는것이 최종 목적. 그러나 이에 따른 risk 도 정확히 파악해야함.
+ 4. science of variation: 많은 경우 중심치 (central value) 에 집중을 함. 그러나 통계학은 산포/변위(variation) 을 이해하는 것을 중시함. (예. '미국인의 평균 카드빛은 $6,000' 이라는 중심치만 보면 문제가 심각해 보이지 않음. 그러나 '10% 의 미국인이 $30,000 이상의 카드빛을 가지고 있다'는 10% 의 산포를 같이 보면 심각함.)
+ 5. art of forecasting: 예측은 통계학의 핵심 목적. 절대적으로 확신할 수 있는 예측은 못해도 확률을 동반한 상당히 정확한 예측이 가능한 경우가 많음 (AI, machine learning 의 본질도 이것임. 따라서 MBA 에서 machine learning 을 할 수 밖에 없음. 시장을 예측하는 tool ...)
+ 6. science of measurement: 측정해서 숫자로 표현(정량화, quantification) 하지 못하는 것으로는 아무것도 할 수 없다. 측정 방법을 찾는 것은 통계학에서 매우 중요한 분야.
+ 7. basis for principled data collection: data 는 대개 비용이 많이 들고, 수집이 어려움. 또한 수집에 쓸 수 있는 resource 는 한정됨. 따라서 가급적 최소의 data 로 analysis 가 가능한 통계적 방법을 찾아야 함.
+
+00. Statistics 의 발전 단계
+ 1. 고대의 Data Collection: 추수량, 홍수빈도, 인구수
+ 2. 17세기 확률론(Probability Theory): 무작위성과 변위 (randomness and variation)
+ 3. 19세기 현대 통계학: 유전학과 인구구조, 경제학 등에 관련
+ 4. 20세기 통계 이론의 발전과 새로운 응용: Computer 로 data 정리 및 처리
+ 5. 21세기: big data, data science, machine learning

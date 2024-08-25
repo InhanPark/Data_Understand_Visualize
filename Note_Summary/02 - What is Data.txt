@@ -1,0 +1,54 @@
+00. 다양한 형태의 data 가 있다.
+ - Number
+ - Image
+ - Word: 소설책, 건강기록, 신문, code
+ - Audio
+
+00. Organic / Process Data
+  . 금융이나 판매 상호작용에서 발생하는 data (맥도날드 주문 data)
+  . 주식 시장의 거래
+  . 넷플릭스 시청 기록
+  . 웹브라우저 사용에서 발생하는 data
+  . 스포츠, 학교 등에서 생기는 data
+  . 온도 / 공해 센서에서 만들어지는 data
+  -> Big Data 들이어서 computational resource 가 많이 들어감
+  -> data scientist 들이 trend 분석등을 위하여 'mining' 을 함
+
+00. "Designed" Data Collection
+  -> 목적이 정해져서 일부러 만든 data
+  . 전체 (population) 에서 sample 된 것의 data
+  . 특정 주제에 대한 의견 인터뷰 data
+  -> data 크기가 작고, 매우 특정한 목적으로 수집됨
+
+00. Data 를 분석하는데는 i.i.d 가 중요함
+  . independent and identically distributed (독립적이고 균등하게, 편중안되게 분포)
+  . 대상을 관찰(측정)하는 것 자체가 영향을 주면 안됨 (independent)
+  . 특정 종교를 믿는 사람을 대상으로 신의 존재에 대한 조사를 하면? (not identical)
+  -> 분석하려는 data 가 어디서 온 것인지, 어떻게 수집 되었는지가 매우 중요함
+
+00. Variable Types, Quantitative Variables (양적 변수)
+  - 수치이고 (numerical), 측정 가능한 (measurable) 양 (quantity) 으로 산술 연산이 의미가 있는 경우가 많음
+  - Continuous variable (연속형 변수): 주어진 구간에 많은 값들이 있을 수 있는것. 몸무게, 키, BMI, 시간, 나이 등
+  - Discrete variable (이산형 변수): 셀 수 있는 값. 주어진 구간에 제한된 값만 있을 수 있는것. 자녀 수 등
+
+00. Categorical (범주형) 또는 Qualitative Variables (질적 변수)
+  - 개인 또는 항목들을 다른 group 으로 분류 함
+  - Ordinal Variable (순서형 변수): 1,2,3,4,5,6 학년
+  - Nominal Variable (명목형 변수): 여자를 0, 남자를 1 로 표현
+
+00. Research Study (연구) 의 종류
+  - Exploratory (탐색의) 대 Confirmatory (확인의)
+   . Confirmatory 는 어떤 반증 가능한 가설 (falsifiable hypothesis) 을 세우고 이를 검정 (test) 하는것으로, 미리 확정된 하나의 질문에 대해 data 를 모은다. 과학에서 많이 사용하는 방법이다. 하나의 data 에 대해서 많은 질문을 세우면 잘못된 결론을 낼 수 있다.
+   . Exploratory 은 미리 확정된 질문 없이 data 를 모으고 분석하는 것이다.
+  - Comparative (상대적인 비교의) 대 Non-comparative (상대적이 아닌)
+   . Non-comparative 은 추정하거나 예측하는 것이 주가 처럼 절대 숫자인 경우
+   . Comparative 는 기존대비 신약의 효과처럼 상대적인 경우
+  - Observational (관찰) 대 Experiments (실험)
+   . 흡연자와 비흡연자를 관찰해서 흡연의 영향을 결론, Observational
+   . 채소에 성분이 다른 비료를 주는 실험을 해서 효과 결론, Experiments
+   . Observation study 를 할때는 대상자들에게 어떤 조건에 처해졌는지 알려줌
+   . Experiment study 를 할때는 대상자들을 random 하게 지정함
+
+00. Power Analysis and Bias
+  - Power analysis (검증력 분석): 주어진 study design (연구 설계) 가 의미 있는 결과를 얻을지를 평가함
+  - Bias (편향): 통계에서 추정한 결과가 한 쪽으로 치우치는 경향을 보임으로써 실제와의 차이로 발생하는 오차. Observational study 는 항상 이 위험에 노출된다. (마트 밖에서 사람들을 관찰해서 요즘은 복숭아를 많이 먹는다 결론 내었는데, 실은 그때 복숭아를 세일하고 있었음)
