@@ -1,0 +1,58 @@
+00. One Variable (univariate data) Analysis
+  - 많은 것들은 한가지의 변화에 따라 결과가 바뀌지 않음. 예를들어 직원의 근무의욕은 급여가 아닌 여러가지에 따라 바뀜 (multi variable 상황). 그러나 이것은 분석이 어렵기 때문에 main variable 하나로 줄여서 분석하는 경우가 많음 (model 의 단순화)
+  - 또한 variable 의 성격에 따라 quantitative data (정량적) 와 categorical data (범주적) 로 나누어짐. 예를들어 급여에 따른 직원들의 만족도를 조사하면 quantitative data 이며, 직급에 따라 현급여의 만족도 여부를 조사하면 categorical data 임.
+  - One variable 에 대해서 quantitative data 를 graphical/numerical analysis 하는 방법은 histogram, box plot, numerical summary 가 있고, categorical data 에 대해서는 bar chart, pie chart 등이 있다.
+  - Numerical summary 는 data 를 summary 하는 수치를 말하는데, mean(평균), IQR(사분위수), standard deviation(표준편차) 가 있다.
+
+00. Categorical Data Analysis Example: Marital status (결혼상태)
+  - Raw data 는 "ID - Marital Status" 로 구성. Marital status 로 grouping 을 할 수 있음.
+  - Marital status 는 "1-Married, 2-Widowed, 3-Divorced ..." 의 8개로 나뉘어짐. 이때 숫자는 단지 group 을 구분하기 위한 Nominal Variable (명목형 변수) 임
+  - Frequency Table 은 Marital status 에 따라 각 group 의 숫자를 정리한 것임 (Marital Status/Count/Percent). Frequency table 은 numerical summary 하는데 좋음
+  - Bar Chart 는 Marital Status 를 variable (one variable) 로 Frequency 에 대해서 그린것임. Bar chart 는 가장 일반적인 graphical (visualization) summary 방법이며, 크기 순위로 그리면 더욱 보기가 쉬움
+  - Pie Chart 는 전체를 기준으로 차지하는 비율의 파악에는 좋으나, label 이 겹치는 경우가 많고, 비슷한 비율인 경우 구분이 어려운 이유등으로 사용이 제한적임.
+
+00. Quantitative Data Analysis: Histogram
+  - Quantitative Variable 은 수학적인 연산을 할 수 있는 variable 이다. 이것을 분석하는데 가장 기본적인 방법이 histogram 이다.
+  - Histogram 은 관심 대상(variable)을 한쪽 axis 에 그리고 다른 axis 에는 frequency(빈도) 를 놓고 bar chart 를 그린것이다.
+  - Variable 은 값의 구간에 bin 이라는 group 으로 나눈다 (무언가를 나눌때 깡통을 놓고 분리해서 담은데 유래한듯). 
+  - Histogram 은 4가지 측면에서 분석을 한다.
+   . Shape : 전체적인 모양의 측면. Symmetric(대칭성), Bell-shaped(unimodal,정규성), Skew(편중된 정도)
+   . Center : 중심값의 측면. Mean(평균), Median(중앙값), Frequency(빈도)
+   . Spread : 중심값을 기준으로 퍼진 정도. Range(max-min,범위), Interquartile Range(IQR), Standard deviation(표준편차), Variance(분산)
+   . Outlier : 대부분의 data 와 동떨어져있는 data
+  - 분석 결과는 아래 예와 같이 정리한다.
+    "The distribution of salaries in San Francisco is bimodal and skewed to the right. Centered at about $80,000 with most of the data between $40,000 and $120,000. A range of roughly $600,000, and outliers are present on the higher end."
+
+00. Quantitative Data Analysis: Numerical Summaries
+  - Data 모음이 있으면 무조건 여섯개의 숫자는 확인해야 한다. 이것으로 충분한 경우가 많다 (우리는 대개 평균 하나만 가지고 함).
+    0. Data 갯수 : 10개도 안되는 data 로 성급한 결론을 내는일은 없어야 ... 
+    1. Min : 최소값
+    2. 1st Quartile : 25% 값
+    3. Median : 중앙값. Mean(평균값)과 차이가 적으면 data shape 이 symmetric 한것임.
+    4. 3rd Quartile : 75% 값. Q3-Q1 의 차이가 적으면 data 산포가 적은것임.
+    5. Max : 최대값. 최소값과 최대값의 차이 (range, 범위)가 적으면 outlier 없는것임
+  - 여기에 Standard Deviation (표준편차) 를 추가로 보면 대부분 충분하다. 표준편차는 대부분의 data 가 평균을 중심으로 +/- 표준편차내에 있다는 의미이다.
+
+00. Normal Distribution (정규분포) & Standard Deviation (표준편차)
+  - 'Normal Distribution' 이라는 이름 그대로, 일상적인 많은 현상들의 histogram 을 그려보면 신기하게도 이 분포의 모양을 가진다. 이것은 이론법칙이 아니라 경험의 법칙 (Emperical Rule) 이다. 파렛토의 법칙이나 피보나치수열 같은것이다.
+  - 이런 분포 모양을 'Bell Shape (종모양)' 이라고도 한다. 이 분포에 대해서는 연구가 많이 되었기 때문에, 어떤 현상의 histogram 을 그려보았는데, 이 모양을 따른다면 여러가지 추정을 쉽게 할 수 있다. 예를들면 강의에서 처럼 수면시간을 조사해 보았더니 정규분포를 따른다면 8.7시간보다 적게 수면을 취하는 사람의 확률이 84% 라고 추정할 수 있다. 정규분포를 확률분포 (확률밀도함수라고 한다) 로 생각하면 0~8.7시간 사이를 적분하면 84% 가 나오기 때문이다. 신기하지만 이 추정은 거의 정확하게 맞는다.
+  - 정규분포에서 가장 중요한 숫자는 mean 과 standard deviation (SD) 이다. SD 는 평균값에서 떨어진 정도를 나타내는 것인다. 정규분포의 경우는 68% 가 +/- SD 범위안에 있고, 95% 가 +/- 2SD, 99.7% 가 +/- 3SD 안에 있다. 평균에서 떨어진 정도가 몇 SD 인가는 산포의 중요한 지표가 된다.
+  - 우리반 성적이 정규분포를 나타내는데 평균이 70점이면 SD는 17점이 된다. 그러면 53점에서 87점 사이에 68% 가 속해야만 한다. 내가 88점이면 84% 보다는 잘한것이라고 결론 내어도 된다.
+  - 'Normal Distribution' 이 중요한 이유는 이 분포에 일치하는 현상은 자동적으로 해석과 예측이 된다는 것이다. 이때문에 data 가 있으면, 일단 histogram 을 그리고, 정규분포 여부를 확인하는게 통계분석의 기본이다. (앞의 6개 숫자 파악과 더불어)
+
+00. Box plot
+  - Box plot 은 매우 많이 쓰이는 유용한 tool 이다. 이것은 단지 6개의 숫자 (min-25% 값-50% 값-75% 값-max 그리고 outlier) 를 간결히 표현한 그림이다.
+  - 먼저 이 그림 한개로 data 의 형태를 꽤 정확히 파악할 수 있다. 25-50-75% 의 간격이 넓으면 상포가 크다는 것을 알 수 있다. 그리고 outlier 가 있다는 것도 알 수 있다. Data 분석에 조금만 익숙해지면 box plot 이 말해주는 내용을 쉽게 이해할 수 있다.
+  - Box plot 의 최대 강점은 다른 data 끼리의 비교이다. Histogram 과 달리 매우 간단한 그림이므로, 여러개 data 군을 하나의 그림에 표시하고 쉽게 비교할 수 있다.
+
+00. Probability Distribution Function (확률분포함수)
+  - 추가적인 진도를 위해서는 확률분포라는 개념이 필요하여 설명을 함.
+  - 초등학교때부터 배운 주사위를 던지는 경우를 생각해보자. 1~6 까지의 각 숫자가 나올 확률은 각각 1/6=0.167 이다. 이것을 모두 더하면 6/6=1.0 확률이 된다.
+  - 이 확률을 graph 로 그려보자. x 축은 1~6까지 각 면의 숫자를 적고, y 축은 각 숫자에 대해서 발생할 확률을 그려보자. 높이가 0.167인 막대 6개가 그려진다. "y = 6면(x) 의 확률" 함수이다.
+  - 이렇게 각 사건 x에 대한, 각 사건의 확률 y 를 그린것을 확률 함수라고 부른다. 그리고 이 함수는 각각의 값을 모두 더하면 1이된다. (x에 대하여 y값을 적분하면)
+  - 주사위의 면 6개는 각각 독립적이다. 이런 경우는 discrete variable (이산변수) 이다. Discrete variable 에 대한 확률함수를 mass function (질량함수) 이라고 부른다.
+  - 앞에서 예로든 '수면시간'의 정규분포를, x축을 '수면시간', y축을 '각 수면시간의 확률' 로 graph 를 그리면 bell-shaped curve 가 그려진다. 이 curve 의 면적을 구해보면 (적분) 1이 된다. 수면시간은 continuous variable (연속변수) 이다.  Continuous variable 에 대한 확률함수를 density function (밀도함수) 이라고 부른다. Density function 은 평균값(중심값)을 0 으로 그린다.
+  - 확률분포함수가 유용한 것은 어느 경우가 발생할 확률은 물론 (해당 x 값에 대한 y값이 바로 확률이므로), 어느 범위의 경우가 발생할 확률도 (해당 범위의 x 에 대해 적분을 해서 면적을 구하기만 하면되므로) 쉽게 구할 수 있기 때문이다. 여기에 population (모수) 를 곱하기만 하면 되기 때문이다.
+  - 예를들어 '수면시간'이 정규분포를 가지는 것을 알았다면, 우리나라 국민 중 몇명이 5시간 이하의 저수면을 하고 있는지를 구하려면, 정규분포에서 5시간 이하의 면적(확률)을 구하고 (이미 표로 만들어져 있거나, SciPy 로 구하면 된다.) 여기에 국민 전체의 인원수를 곱하면된다.
+
+   
